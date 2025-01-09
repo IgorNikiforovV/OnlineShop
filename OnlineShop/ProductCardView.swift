@@ -18,10 +18,22 @@ struct ProductCardView: View {
             ZStack(alignment: .topTrailing) {
                 if let url = URL(string: product.image) {
                     CardImageView(url: url, size: size)
+
+                    Button {
+
+                    } label: {
+                        Image(systemName: "heart.fill")
+                            .padding(6)
+                            .foregroundColor(product.isFavorite ? .red : .white)
+                            .background(.black)
+                            .clipShape(Circle())
+                            //.padding()
+                    }
+
                 }
             }
         }
-        .frame(height: UIScreen.main.bounds.width * 0.7)
+        .frame(height: UIScreen.main.bounds.width * 0.6)
         .background(.background.opacity(0.5))
         .padding(10)
     }
