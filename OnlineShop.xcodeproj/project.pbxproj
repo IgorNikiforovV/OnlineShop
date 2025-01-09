@@ -50,6 +50,7 @@
 		ACDC5FB22D2EF5640016B00A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC5FB12D2EF5640016B00A /* FavoritesView.swift */; };
 		ACDC5FB42D2EF57F0016B00A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC5FB32D2EF57E0016B00A /* CartView.swift */; };
 		ACDC5FB62D2EF9880016B00A /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC5FB52D2EF9880016B00A /* ProductCardView.swift */; };
+		ACDC5FB82D2FA04A0016B00A /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDC5FB72D2FA04A0016B00A /* CardImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		ACDC5FB12D2EF5640016B00A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		ACDC5FB32D2EF57E0016B00A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		ACDC5FB52D2EF9880016B00A /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		ACDC5FB72D2FA04A0016B00A /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				ACDC5FB12D2EF5640016B00A /* FavoritesView.swift */,
 				ACDC5FB32D2EF57E0016B00A /* CartView.swift */,
 				ACDC5FB52D2EF9880016B00A /* ProductCardView.swift */,
+				ACDC5FB72D2FA04A0016B00A /* CardImageView.swift */,
 				AC5FB3D02D2C56EF00C933FC /* Assets.xcassets */,
 				AC5FB3D22D2C56EF00C933FC /* Preview Content */,
 			);
@@ -278,6 +281,7 @@
 			files = (
 				ACDC5FB62D2EF9880016B00A /* ProductCardView.swift in Sources */,
 				ACDC5FB42D2EF57F0016B00A /* CartView.swift in Sources */,
+				ACDC5FB82D2FA04A0016B00A /* CardImageView.swift in Sources */,
 				ACDC5FB22D2EF5640016B00A /* FavoritesView.swift in Sources */,
 				AC5FB3CF2D2C56ED00C933FC /* MainView.swift in Sources */,
 				AC5FB3CD2D2C56ED00C933FC /* OnlineShopApp.swift in Sources */,

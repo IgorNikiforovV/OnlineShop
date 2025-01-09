@@ -8,15 +8,35 @@
 import SwiftUI
 
 struct ProductCardView: View {
+    let product : Product
+
+    // MARK: - Body
     var body: some View {
         GeometryReader { geo in
             let size = geo.size
+
+            ZStack(alignment: .topTrailing) {
+                if let url = URL(string: product.image) {
+                    CardImageView(url: url, size: size)
+                }
+            }
         }
-        .frame(height: UIScreen.main.bounds.width * 0.5)
-        .background(.green)
+        .frame(height: UIScreen.main.bounds.width * 0.7)
+        .background(.background.opacity(0.5))
+        .padding(10)
     }
 }
 
 #Preview {
-    ProductCardView()
+    ProductCardView(
+        product: Product(
+            id: "12345",
+            name: "iPhone PRO MAX",
+            description: "The most recognizable phone",
+            image: "https://firebasestorage.googleapis.com/v0/b/onlineshop-809e7.firebasestorage.app/o/products%2F5.webp?alt=media&token=a00e7ed7-53fa-4a16-884d-e9f527ed83aa",
+            price: 999,
+            isFavorite: false,
+            quantityInCart: nil
+        )
+    )
 }
