@@ -48,11 +48,8 @@ struct ProductCardView: View {
             .cornerRadius(10)
         }
         //.padding(10)
-        .frame(height: UIScreen.main.bounds.width * 0.6)
-        .background(.background.opacity(0.5))
+        .frame(height: UIScreen.main.bounds.width * 0.7)
         .cornerRadius(10)
-        .padding(10)
-        //.shadow(color: .mint.opacity(0.3), radius: 1)
     }
 }
 

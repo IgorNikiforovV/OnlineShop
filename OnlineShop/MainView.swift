@@ -13,7 +13,7 @@ struct MainView: View {
     // MARK: - Properties
     @FirestoreQuery(collectionPath: "shop") var items: [Product]
 
-    let columns = Array(repeating: GridItem(spacing: 2), count: 2)
+    let columns = Array(repeating: GridItem(), count: 2)
 
     // MARK - Body
     var body: some View {
@@ -25,7 +25,9 @@ struct MainView: View {
                     }
                 }
             }
-            .background(Color(uiColor: .systemGray5), ignoresSafeAreaEdges: .all)
+            .padding(.horizontal, 10)
+            .background(.secondary.opacity(0.3))
+            .shadow(color: .black.opacity(0.2) , radius: 8, x: 5, y: 8)
 
             // MARK: - Navigation Bar
             .navigationTitle("Products")
