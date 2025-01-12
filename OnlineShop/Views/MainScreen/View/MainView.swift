@@ -12,6 +12,7 @@ struct MainView: View {
 
     // MARK: - Properties
     @FirestoreQuery(collectionPath: "shop") var items: [Product]
+    @EnvironmentObject var viewModel: ViewModel
 
     let columns = Array(repeating: GridItem(), count: 2)
 
@@ -54,4 +55,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(ViewModel())
 }

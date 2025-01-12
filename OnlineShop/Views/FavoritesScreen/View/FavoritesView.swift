@@ -13,6 +13,7 @@ struct FavoritesView: View {
     // MARK: - Properties
     @FirestoreQuery(collectionPath: "shop", predicates: [.isEqualTo("isFavorite", true)]) var favoriteItems: [Product]
     var columns = Array(repeating: GridItem(), count: 2)
+    @EnvironmentObject var viewModel: ViewModel
 
     // MARK: - Body
     var body: some View {
@@ -22,13 +23,17 @@ struct FavoritesView: View {
                     NavigationLink(destination: EmptyView()) {
                         ProductCardView(product: item)
                     }
+                    .buttonStyle(.plain)
                 }
             }
         }
+        .padding(.horizontal, 10)
+        .background(.secondary.opacity(0.3))
         .navigationTitle("Favorites")
     }
 }
 
 #Preview {
     FavoritesView()
+        .environmentObject(ViewModel())
 }
