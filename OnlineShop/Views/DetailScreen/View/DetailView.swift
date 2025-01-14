@@ -13,9 +13,9 @@ struct DetailView: View {
     var body: some View {
         VStack {
             if let url = URL(string: product.image) {
-                CardImageView(url: url, size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2))
+                CardImageView(url: url, size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.7))
                     .ignoresSafeArea()
-                    .background(.blue)
+                    .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
             }
 
             VStack(alignment: .leading, spacing: 20) {
@@ -29,6 +29,7 @@ struct DetailView: View {
 
                 Text(product.description)
                     .subtitle
+                    .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     .lineLimit(6)
 
                 Spacer()
@@ -48,6 +49,7 @@ struct DetailView: View {
             }
             .padding(.horizontal, 30)
         }
+        .background(.secondary.opacity(0.3))
     }
 }
 

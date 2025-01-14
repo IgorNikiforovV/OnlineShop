@@ -22,7 +22,6 @@ struct ProductCardView: View {
                 ZStack(alignment: .topTrailing) {
                     if let url = URL(string: product.image) {
                         CardImageView(url: url, size: size)
-
                         Button {
                             viewModel.toggleFavorite(product: product)
                         } label: {
@@ -47,10 +46,12 @@ struct ProductCardView: View {
                 .padding(10)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.background.opacity(0.5))
+                .cornerRadius(20)
+                .padding(8)
+                .shadow(radius: 10, y: 8)
             }
-            .cornerRadius(10)
+
         }
-        //.padding(10)
         .frame(height: UIScreen.main.bounds.width * 0.7)
         .cornerRadius(10)
     }
