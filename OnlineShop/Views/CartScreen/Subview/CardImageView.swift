@@ -19,8 +19,8 @@ struct CardImageView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: size.width, height: size.height)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .background(.white)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
         } placeholder: {
             ProgressView()
                 .frame(width: size.width, height: size.height)

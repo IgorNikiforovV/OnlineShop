@@ -22,7 +22,12 @@ struct MainView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: columns) {
                     ForEach(items) { item in
-                        ProductCardView(product: item)
+                        NavigationLink {
+                            DetailView(product: item)
+                        } label: {
+                            ProductCardView(product: item)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }
