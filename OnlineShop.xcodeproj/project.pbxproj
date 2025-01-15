@@ -20,6 +20,8 @@
 		AC5FB3E92D2D113600C933FC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FB3E82D2D113600C933FC /* Product.swift */; };
 		AC8C76CF2D33927700219821 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C76CE2D33927700219821 /* ViewModel.swift */; };
 		AC8C76D62D34F71E00219821 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C76D52D34F71E00219821 /* DetailView.swift */; };
+		AC924AE22D37835D002DBCF3 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC924AE12D37835D002DBCF3 /* BackButtonView.swift */; };
+		AC924AE52D378565002DBCF3 /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC924AE42D378565002DBCF3 /* DetailInfoView.swift */; };
 		ACDC5F762D2D16E60016B00A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F752D2D16E60016B00A /* FirebaseAnalytics */; };
 		ACDC5F782D2D16E60016B00A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F772D2D16E60016B00A /* FirebaseAnalyticsOnDeviceConversion */; };
 		ACDC5F7A2D2D16E60016B00A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F792D2D16E60016B00A /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -66,6 +68,8 @@
 		AC5FB3E82D2D113600C933FC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = ../../../Product.swift; sourceTree = "<group>"; };
 		AC8C76CE2D33927700219821 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		AC8C76D52D34F71E00219821 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		AC924AE12D37835D002DBCF3 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		AC924AE42D378565002DBCF3 /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
 		ACDC5FB12D2EF5640016B00A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		ACDC5FB32D2EF57E0016B00A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		ACDC5FB52D2EF9880016B00A /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		AC5FB3CB2D2C56ED00C933FC /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				AC924AE02D378344002DBCF3 /* Components */,
 				AC8C76CC2D3378FE00219821 /* Views */,
 				AC8C76CD2D33790A00219821 /* ViewModel */,
 				AC5FB3E72D2D10CC00C933FC /* Entities */,
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8C76D42D34F70400219821 /* View */,
+				AC924AE32D378558002DBCF3 /* Subviews */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -265,6 +271,22 @@
 				AC8C76D52D34F71E00219821 /* DetailView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AC924AE02D378344002DBCF3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC924AE12D37835D002DBCF3 /* BackButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AC924AE32D378558002DBCF3 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				AC924AE42D378565002DBCF3 /* DetailInfoView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		ACDC5F742D2D168D0016B00A /* Frameworks */ = {
@@ -397,9 +419,11 @@
 				ACDC5FB42D2EF57F0016B00A /* CartView.swift in Sources */,
 				AC8C76D62D34F71E00219821 /* DetailView.swift in Sources */,
 				ACDC5FB82D2FA04A0016B00A /* CardImageView.swift in Sources */,
+				AC924AE52D378565002DBCF3 /* DetailInfoView.swift in Sources */,
 				ACDC5FB22D2EF5640016B00A /* FavoritesView.swift in Sources */,
 				ACDC5FBB2D30F9D60016B00A /* Extension+Text.swift in Sources */,
 				AC5FB3CF2D2C56ED00C933FC /* MainView.swift in Sources */,
+				AC924AE22D37835D002DBCF3 /* BackButtonView.swift in Sources */,
 				AC5FB3CD2D2C56ED00C933FC /* OnlineShopApp.swift in Sources */,
 				AC5FB3E92D2D113600C933FC /* Product.swift in Sources */,
 			);
