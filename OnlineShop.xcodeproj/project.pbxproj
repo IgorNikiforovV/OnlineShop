@@ -22,6 +22,7 @@
 		AC8C76D62D34F71E00219821 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8C76D52D34F71E00219821 /* DetailView.swift */; };
 		AC924AE22D37835D002DBCF3 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC924AE12D37835D002DBCF3 /* BackButtonView.swift */; };
 		AC924AE52D378565002DBCF3 /* DetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC924AE42D378565002DBCF3 /* DetailInfoView.swift */; };
+		AC924AE72D3789AA002DBCF3 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC924AE62D3789AA002DBCF3 /* ProductRow.swift */; };
 		ACDC5F762D2D16E60016B00A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F752D2D16E60016B00A /* FirebaseAnalytics */; };
 		ACDC5F782D2D16E60016B00A /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F772D2D16E60016B00A /* FirebaseAnalyticsOnDeviceConversion */; };
 		ACDC5F7A2D2D16E60016B00A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = ACDC5F792D2D16E60016B00A /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -70,6 +71,7 @@
 		AC8C76D52D34F71E00219821 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		AC924AE12D37835D002DBCF3 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		AC924AE42D378565002DBCF3 /* DetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoView.swift; sourceTree = "<group>"; };
+		AC924AE62D3789AA002DBCF3 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		ACDC5FB12D2EF5640016B00A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		ACDC5FB32D2EF57E0016B00A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		ACDC5FB52D2EF9880016B00A /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDC5FB72D2FA04A0016B00A /* CardImageView.swift */,
+				AC924AE62D3789AA002DBCF3 /* ProductRow.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				ACDC5FB22D2EF5640016B00A /* FavoritesView.swift in Sources */,
 				ACDC5FBB2D30F9D60016B00A /* Extension+Text.swift in Sources */,
 				AC5FB3CF2D2C56ED00C933FC /* MainView.swift in Sources */,
+				AC924AE72D3789AA002DBCF3 /* ProductRow.swift in Sources */,
 				AC924AE22D37835D002DBCF3 /* BackButtonView.swift in Sources */,
 				AC5FB3CD2D2C56ED00C933FC /* OnlineShopApp.swift in Sources */,
 				AC5FB3E92D2D113600C933FC /* Product.swift in Sources */,

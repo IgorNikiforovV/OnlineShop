@@ -15,7 +15,7 @@ extension Text {
             .opacity(0.8)
     }
 
-    var subtitle: some View {
+    var subtitleFont: some View {
         self
             .foregroundStyle(.primary)
             .font(.system(size: 15, weight: .regular, design: .rounded))
@@ -29,7 +29,7 @@ struct FontView: View {
             Text("Title Font")
                 .titleFont
             Text("Subtitle Font")
-                .subtitle
+                .subtitleFont
         }
     }
 }
