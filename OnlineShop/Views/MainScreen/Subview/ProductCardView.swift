@@ -41,7 +41,7 @@ struct ProductCardView: View {
                         .titleFont
                         .lineLimit(1)
                     Text("$\(product.textPrice)")
-                        .subtitle
+                        .subtitleFont
                 }
                 .padding(10)
                 .frame(maxWidth: .infinity, alignment: .leading)
