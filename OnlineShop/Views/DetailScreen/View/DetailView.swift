@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
 
     // MARK: - Properties
+    @EnvironmentObject var viewModel: ViewModel
     let product: Product
 
     // MARK: - Body
@@ -43,4 +44,5 @@ struct DetailView: View {
         isFavorite: false,
         quantityInCart: nil
     ))
+    .environmentObject(ViewModel())
 }

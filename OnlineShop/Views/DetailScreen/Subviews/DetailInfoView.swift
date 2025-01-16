@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailInfoView: View {
 
     // MARK: - Properties
+    @EnvironmentObject var viewModel: ViewModel
     let product: Product
 
     // MARK: - Body
@@ -31,7 +32,7 @@ struct DetailInfoView: View {
             Spacer()
 
             Button {
-                // add to cart
+                viewModel.addToCatr(product: product)
             } label: {
                 Text("Add to cart")
                     .frame(maxWidth: .infinity)
@@ -57,4 +58,5 @@ struct DetailInfoView: View {
         isFavorite: false,
         quantityInCart: nil
     ))
+    .environmentObject(ViewModel())
 }
