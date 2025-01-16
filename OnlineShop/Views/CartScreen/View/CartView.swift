@@ -7,12 +7,16 @@
 
 import SwiftUI
 
+
 struct CartView: View {
     var body: some View {
-        VStack {
 
-        }
+            VStack {
+                ScrollView(.vertical, showsIndicators: false) {
+                }
+            }
         .navigationTitle("Cart")
+        .background(.secondary.opacity(0.3))
     }
 }
 

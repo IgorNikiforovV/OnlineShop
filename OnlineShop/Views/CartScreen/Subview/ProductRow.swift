@@ -14,52 +14,33 @@ struct ProductRow: View {
 
     // MARK: - Body
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            ZStack(alignment: .trailing) {
-                HStack(spacing: 20) {
+        ZStack(alignment: .trailing) {
+            HStack(spacing: 20) {
 
-                    // MARK: - Image
-                    if let url = URL(string: product.image) {
-                        CardImageView(url: url, size: CGSize(width: 100, height: 100 ))
-                    }
-                    // MARK: - Info
-                    VStack(alignment: .leading, spacing: 20) {
-                        Text(product.name)
-                            .titleFont
-                            //.lineLimit(1)
-                        Text("$\(product.textPrice)")
-                            .subtitleFont
-                            //.lineLimit(1)
-                    }
-
-                    Spacer()
+                // MARK: - Image
+                if let url = URL(string: product.image) {
+                    CardImageView(url: url, size: CGSize(width: 100, height: 100 ))
                 }
-                .padding(10)
-                .background(.background)
-                .cornerRadius(20)
-
-                VStack {
-                    Button {
-
-                    } label: {
-                        Image(systemName: "xmark.circle.fill")
-                    }
-                    .buttonStyle(.plain)
-
-                    HStack {
-                        Button {
-
-                        } label: {
-                            Image(systemName: "minus.rectangle.fill")
-                        }
-                    .buttonStyle(.plain)
-                    }
+                // MARK: - Info
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(product.name)
+                        .titleFont
+                        .lineLimit(1)
+                    Text("$\(product.textPrice)")
+                        .subtitleFont
+                        .lineLimit(1)
                 }
+
+                Spacer()
             }
+            .padding(10)
+            .background(.background)
+            .cornerRadius(20)
+
+            RemoteControlRowView(product: product)
         }
+        .shadow(color: .black.opacity(0.1), radius: 7, x: 5 , y: 6)
         .padding(.horizontal, 10)
-        .navigationTitle("Cart")
-        .background(.secondary.opacity(0.3))
     }
 }
 
@@ -72,7 +53,7 @@ struct ProductRow: View {
             image: "https://firebasestorage.googleapis.com/v0/b/onlineshop-809e7.firebasestorage.app/o/products%2F5.webp?alt=media&token=a00e7ed7-53fa-4a16-884d-e9f527ed83aa",
             price: 999,
             isFavorite: false,
-            quantityInCart: nil
+            quantityInCart: 5
         ))
     }
 }
