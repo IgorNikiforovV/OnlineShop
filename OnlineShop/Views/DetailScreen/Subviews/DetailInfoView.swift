@@ -31,17 +31,8 @@ struct DetailInfoView: View {
 
             Spacer()
 
-            Button {
+            CustomMainButton(title: "Add to cart") {
                 viewModel.addToCatr(product: product)
-            } label: {
-                Text("Add to cart")
-                    .frame(maxWidth: .infinity)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background(.black)
-                    .clipShape(Capsule())
-                    .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
             }
         }
         .padding(.horizontal, 30)

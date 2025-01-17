@@ -11,12 +11,13 @@ struct RemoteControlRowView: View {
 
     // MARK: - Properties
     let product: Product
+    @EnvironmentObject var viewModel: ViewModel
 
     // MARK: - Body
     var body: some View {
         VStack(alignment: .trailing, spacing: 25) {
             Button {
-
+                viewModel.removeFromCart(product: product)
             } label: {
                 Image(systemName: "xmark.circle.fill")
                     .font(.title2)
