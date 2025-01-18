@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailInfoView: View {
 
     // MARK: - Properties
+    @EnvironmentObject var viewModel: ViewModel
     let product: Product
 
     // MARK: - Body
@@ -30,17 +31,8 @@ struct DetailInfoView: View {
 
             Spacer()
 
-            Button {
-                // add to cart
-            } label: {
-                Text("Add to cart")
-                    .frame(maxWidth: .infinity)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-                    .padding()
-                    .background(.black)
-                    .clipShape(Capsule())
-                    .shadow(color: .black.opacity(0.3), radius: 10, x: 5, y: 8)
+            CustomMainButton(title: "Add to cart") {
+                viewModel.addToCatr(product: product)
             }
         }
         .padding(.horizontal, 30)
@@ -57,4 +49,5 @@ struct DetailInfoView: View {
         isFavorite: false,
         quantityInCart: nil
     ))
+    .environmentObject(ViewModel())
 }

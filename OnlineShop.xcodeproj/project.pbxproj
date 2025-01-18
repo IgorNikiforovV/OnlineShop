@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC28F2082D38D6F80028021F /* RemoteControlRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28F2072D38D6F70028021F /* RemoteControlRowView.swift */; };
+		AC28F20F2D3A2C6C0028021F /* CustomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC28F20E2D3A2C6C0028021F /* CustomMainButton.swift */; };
 		AC5FB3CD2D2C56ED00C933FC /* OnlineShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FB3CC2D2C56ED00C933FC /* OnlineShopApp.swift */; };
 		AC5FB3CF2D2C56ED00C933FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FB3CE2D2C56ED00C933FC /* MainView.swift */; };
 		AC5FB3D12D2C56EF00C933FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5FB3D02D2C56EF00C933FC /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		AC28F2072D38D6F70028021F /* RemoteControlRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlRowView.swift; sourceTree = "<group>"; };
+		AC28F20E2D3A2C6C0028021F /* CustomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainButton.swift; sourceTree = "<group>"; };
 		AC5FB3C92D2C56ED00C933FC /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5FB3CC2D2C56ED00C933FC /* OnlineShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopApp.swift; sourceTree = "<group>"; };
 		AC5FB3CE2D2C56ED00C933FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AC924AE12D37835D002DBCF3 /* BackButtonView.swift */,
+				AC28F20E2D3A2C6C0028021F /* CustomMainButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				AC924AE52D378565002DBCF3 /* DetailInfoView.swift in Sources */,
 				ACDC5FB22D2EF5640016B00A /* FavoritesView.swift in Sources */,
 				AC28F2082D38D6F80028021F /* RemoteControlRowView.swift in Sources */,
+				AC28F20F2D3A2C6C0028021F /* CustomMainButton.swift in Sources */,
 				ACDC5FBB2D30F9D60016B00A /* Extension+Text.swift in Sources */,
 				AC5FB3CF2D2C56ED00C933FC /* MainView.swift in Sources */,
 				AC924AE72D3789AA002DBCF3 /* ProductRow.swift in Sources */,
