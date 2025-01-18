@@ -26,6 +26,18 @@ final class ViewModel: ObservableObject {
         updateItem(product: product, data: ["quantityInCart": 0])
     }
 
+    func increaseQuantity(product: Product) {
+        let quantity = (product.quantityInCart ?? 0) + 1
+        updateItem(product: product, data: ["quantityInCart": quantity])
+    }
+
+    func decreaseQuantity(product: Product) {
+        let quantity = (product.quantityInCart ?? 0) - 1
+        if quantity >= 1 {
+            updateItem(product: product, data: ["quantityInCart": quantity])
+        }
+    }
+
     private func updateItem(product: Product, data: [String: Any]) {
         guard let id = product.id else { return }
         db.document(id).updateData(data)

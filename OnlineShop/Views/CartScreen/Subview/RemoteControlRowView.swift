@@ -26,7 +26,7 @@ struct RemoteControlRowView: View {
 
             HStack {
                 Button {
-
+                    viewModel.decreaseQuantity(product: product)
                 } label: {
                     Image(systemName: "minus.rectangle.fill")
                         .foregroundStyle(.primary)
@@ -40,7 +40,7 @@ struct RemoteControlRowView: View {
                 }
 
                 Button {
-
+                    viewModel.increaseQuantity(product: product)
                 } label: {
                     Image(systemName: "plus.rectangle.fill")
                         .foregroundStyle(.primary)
