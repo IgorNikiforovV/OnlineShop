@@ -12,6 +12,7 @@ import FirebaseFirestore
 struct CartView: View {
 
     // MARK: - Properties
+    @EnvironmentObject var viewModel: ViewModel
     @FirestoreQuery(collectionPath: "shop") private var items: [Product]
 
     // MARK: - Body
@@ -24,7 +25,7 @@ struct CartView: View {
                     }
                 }
 
-                Text("Total: ")
+                Text("Total: \(viewModel.totalPrice)")
                     .titleFont
                     .padding(.bottom)
                 CustomMainButton(title: "Buy") {}
@@ -37,4 +38,5 @@ struct CartView: View {
 
 #Preview {
     CartView()
+        .environmentObject(ViewModel())
 }

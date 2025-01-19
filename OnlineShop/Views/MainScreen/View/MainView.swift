@@ -48,8 +48,7 @@ struct MainView: View {
 
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: CartView()) {
-                        Image(systemName: "cart.fill")
-                            .font(.title2)
+                        CartButton(numberOfProducts: viewModel.cartItemCount)
                     }
                     .buttonStyle(.plain)
                 }
