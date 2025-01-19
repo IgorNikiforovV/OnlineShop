@@ -26,9 +26,13 @@ struct ProductRow: View {
                     Text(product.name)
                         .titleFont
                         .lineLimit(1)
-                    Text("$\(product.textPrice)")
-                        .subtitleFont
-                        .lineLimit(1)
+
+                    if let quantityInCart = product.quantityInCart {
+                        let sum = quantityInCart * Int(product.price)
+                        Text("$\(sum)")
+                            .subtitleFont
+                            .lineLimit(1)
+                    }
                 }
 
                 Spacer()
