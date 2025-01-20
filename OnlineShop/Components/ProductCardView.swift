@@ -1,9 +1,3 @@
-//
-//  ProductCardView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 08.01.2025.
-//
 
 import SwiftUI
 

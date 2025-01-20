@@ -1,9 +1,3 @@
-//
-//  CartView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 08.01.2025.
-//
 
 import SwiftUI
 import FirebaseFirestore
@@ -14,10 +8,10 @@ struct CartView: View {
     // MARK: - Properties
     @EnvironmentObject var viewModel: ViewModel
     @FirestoreQuery(collectionPath: "shop") private var items: [Product]
+    let hPadding: CGFloat = 30
 
     // MARK: - Body
     var body: some View {
-
             VStack {
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(items.filter { ($0.quantityInCart ?? 0) > 0 }) { item in
@@ -29,7 +23,7 @@ struct CartView: View {
                     .titleFont
                     .padding(.bottom)
                 CustomMainButton(title: "Buy") {}
-                .padding(.horizontal, 30)
+                .padding(.horizontal, hPadding)
             }
         .navigationTitle("Cart")
         .background(.secondary.opacity(0.3))

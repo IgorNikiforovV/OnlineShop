@@ -1,9 +1,3 @@
-//
-//  MainView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 06.01.2025.
-//
 
 import SwiftUI
 import FirebaseFirestore
@@ -15,6 +9,7 @@ struct MainView: View {
     @EnvironmentObject var viewModel: ViewModel
 
     let columns = Array(repeating: GridItem(), count: 2)
+    let hPadding: CGFloat = 10
 
     // MARK - Body
     var body: some View {
@@ -31,7 +26,7 @@ struct MainView: View {
                     }
                 }
             }
-            .padding(.horizontal, 10)
+            .padding(.horizontal, hPadding)
             .background(.secondary.opacity(0.3))
             .shadow(color: .black.opacity(0.2) , radius: 8, x: 5, y: 8)
 
@@ -40,8 +35,7 @@ struct MainView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     NavigationLink(destination: FavoritesView()) {
-                        Image(systemName: "heart.fill")
-                            .font(.title2)
+                        FavoriteButton()
                     }
                     .buttonStyle(.plain)
                 }

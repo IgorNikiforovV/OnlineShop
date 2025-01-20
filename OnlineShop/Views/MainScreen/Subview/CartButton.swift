@@ -1,9 +1,3 @@
-//
-//  CartButton.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 19.01.2025.
-//
 
 import SwiftUI
 
@@ -11,6 +5,7 @@ struct CartButton: View {
 
     // MARK: - Properties
     var numberOfProducts: Int
+    let badgeSize: CGFloat = 17
 
     // MARK: - Body
     var body: some View {
@@ -23,7 +18,7 @@ struct CartButton: View {
                 Text("\(numberOfProducts)")
                     .font(.callout).bold()
                     .foregroundStyle(.white)
-                    .frame(width: 17, height: 17)
+                    .frame(width: badgeSize, height: badgeSize)
                     .background(.red)
                     .clipShape(Circle())
             }
