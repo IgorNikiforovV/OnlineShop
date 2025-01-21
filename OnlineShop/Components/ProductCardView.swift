@@ -1,11 +1,23 @@
 
 import SwiftUI
 
-struct ProductCardView: View {
-    let product : Product
+// MARK: - Nested types
+extension ProductCardView {
+    enum Const {
+        static var image: String { "heart.fill" }
+    }
+}
 
+struct ProductCardView: View {
+
+    // MARK: - Properties
+    let product : Product
     @EnvironmentObject
     var viewModel: ViewModel
+    let padding6: CGFloat = 6
+    let padding8: CGFloat = 8
+    let padding10: CGFloat = 10
+    let cellHeight = UIScreen.main.bounds.width * 0.7
 
     // MARK: - Body
     var body: some View {
@@ -19,12 +31,12 @@ struct ProductCardView: View {
                         Button {
                             viewModel.toggleFavorite(product: product)
                         } label: {
-                            Image(systemName: "heart.fill")
-                                .padding(6)
+                            Image(systemName: Const.image)
+                                .padding(padding6)
                                 .foregroundColor(product.isFavorite ? .red : .white)
                                 .background(.black)
                                 .clipShape(Circle())
-                                .padding(6)
+                                .padding(padding6)
                         }
 
                     }
@@ -37,16 +49,16 @@ struct ProductCardView: View {
                     Text("$\(product.textPrice)")
                         .subtitleFont
                 }
-                .padding(10)
+                .padding(padding10)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.background.opacity(0.5))
                 .cornerRadius(20)
-                .padding(8)
+                .padding(padding8)
                 .shadow(radius: 10, y: 8)
             }
 
         }
-        .frame(height: UIScreen.main.bounds.width * 0.7)
+        .frame(height: cellHeight)
         .cornerRadius(10)
     }
 }

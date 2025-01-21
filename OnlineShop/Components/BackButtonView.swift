@@ -1,15 +1,19 @@
-//
-//  BackButtonView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 15.01.2025.
-//
 
 import SwiftUI
 
+// MARK: - Nested types
+extension BackButtonView {
+    enum Const {
+        static var image: String { "chevron.left" }
+    }
+}
+
 struct BackButtonView: View {
+
+    // MARK: - Properties
     @Environment(\.dismiss) var dismiss
 
+    // MARK: - Body
     var body: some View {
         Button {
             dismiss()
@@ -19,7 +23,7 @@ struct BackButtonView: View {
                     .frame(width: 34)
                     .foregroundColor(.black.opacity(0.3))
                     .opacity(0.3)
-                Image(systemName: "chevron.left")
+                Image(systemName: Const.image)
                     .font(.title3)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)

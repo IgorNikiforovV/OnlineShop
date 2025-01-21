@@ -1,9 +1,3 @@
-//
-//  CustomMainButton.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 17.01.2025.
-//
 
 import SwiftUI
 

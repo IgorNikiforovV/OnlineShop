@@ -1,9 +1,3 @@
-//
-//  ViewModel.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 12.01.2025.
-//
 
 import Foundation
 import FirebaseFirestore
@@ -22,6 +16,7 @@ final class ViewModel: ObservableObject {
         cartItems.reduce(0) { $0 + (Int($1.price) * ($1.quantityInCart ?? 0)) }
     }
 
+    // MARK: - Initializer
     init() {
         fetchItems()
     }

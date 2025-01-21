@@ -12,7 +12,7 @@ struct CustomRemoteControlButton: View {
         Button {
             action()
         } label: {
-            Image(systemName: "minus.rectangle.fill")
+            Image(systemName: image)
                 .foregroundStyle(.primary)
                 .font(.title)
         }

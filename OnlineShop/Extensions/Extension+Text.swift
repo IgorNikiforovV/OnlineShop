@@ -1,9 +1,3 @@
-//
-//  Extension+Text.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 10.01.2025.
-//
 
 import SwiftUI
 

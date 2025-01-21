@@ -8,10 +8,25 @@
 import SwiftUI
 import FirebaseFirestore
 
+// MARK: - Nested types
+extension FavoritesView {
+    enum Const {
+        enum db {
+            static var path: String { "shop" }
+        }
+        enum navigation {
+            static var title: String { "Favorites" }
+        }
+        enum product {
+            static var favorite: String { "isFavorite" }
+        }
+    }
+}
+
 struct FavoritesView: View {
 
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: "shop", predicates: [.isEqualTo("isFavorite", true)]) var favoriteItems: [Product]
+    @FirestoreQuery(collectionPath: Const.db.path, predicates: [.isEqualTo(Const.product.favorite, true)]) var favoriteItems: [Product]
     var columns = Array(repeating: GridItem(), count: 2)
     let hPadding: CGFloat = 10
 
@@ -29,7 +44,7 @@ struct FavoritesView: View {
         }
         .padding(.horizontal, hPadding)
         .background(.secondary.opacity(0.3))
-        .navigationTitle("Favorites")
+        .navigationTitle(Const.navigation.title)
     }
 }
 
