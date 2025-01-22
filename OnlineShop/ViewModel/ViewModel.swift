@@ -5,7 +5,7 @@ import FirebaseFirestore
 final class ViewModel: ObservableObject {
 
     // MARK: - Properties
-    private let db = Firestore.firestore().collection("shop")
+    private let db = Firestore.firestore().collection(Const.DB.path)
     @Published var cartItems: [Product] = []
 
     var cartItemCount: Int {
@@ -37,26 +37,26 @@ final class ViewModel: ObservableObject {
     }
 
     func toggleFavorite(product: Product) {
-        updateItem(product: product, data: ["isFavorite": !product.isFavorite])
+        updateItem(product: product, data: [Const.DB.isFavorite: !product.isFavorite])
     }
 
     func addToCatr(product: Product) {
-        updateItem(product: product, data: ["quantityInCart": 1])
+        updateItem(product: product, data: [Const.DB.quantityInCart: 1])
     }
 
     func removeFromCart(product: Product) {
-        updateItem(product: product, data: ["quantityInCart": 0])
+        updateItem(product: product, data: [Const.DB.quantityInCart: 0])
     }
 
     func increaseQuantity(product: Product) {
         let quantity = (product.quantityInCart ?? 0) + 1
-        updateItem(product: product, data: ["quantityInCart": quantity])
+        updateItem(product: product, data: [Const.DB.quantityInCart: quantity])
     }
 
     func decreaseQuantity(product: Product) {
         let quantity = (product.quantityInCart ?? 0) - 1
         if quantity >= 1 {
-            updateItem(product: product, data: ["quantityInCart": quantity])
+            updateItem(product: product, data: [Const.DB.quantityInCart: quantity])
         }
     }
 

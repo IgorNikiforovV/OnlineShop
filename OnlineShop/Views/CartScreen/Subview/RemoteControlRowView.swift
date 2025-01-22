@@ -1,17 +1,6 @@
 
 import SwiftUI
 
-// MARK: - Nested types
-extension RemoteControlRowView {
-    enum Const {
-        enum image {
-            static var remove: String { "xmark.circle.fill" }
-            static var decrease: String { "minus.rectangle.fill" }
-            static var increase: String { "plus.rectangle.fill" }
-        }
-    }
-}
-
 struct RemoteControlRowView: View {
 
     // MARK: - Properties
@@ -24,13 +13,13 @@ struct RemoteControlRowView: View {
         VStack(alignment: .trailing, spacing: spacing) {
 
             // MARK: Remove button
-            CustomRemoteControlButton(image: Const.image.remove) {
+            CustomRemoteControlButton(image: Const.Image.remove) {
                 viewModel.removeFromCart(product: product)
             }
 
             HStack {
                 // MARK: Decrease
-                CustomRemoteControlButton(image: Const.image.decrease) {
+                CustomRemoteControlButton(image: Const.Image.decrease) {
                     viewModel.decreaseQuantity(product: product)
                 }
 
@@ -41,7 +30,7 @@ struct RemoteControlRowView: View {
                 }
                 
                 // MARK: - Increase
-                CustomRemoteControlButton(image: Const.image.increase) {
+                CustomRemoteControlButton(image: Const.Image.increase) {
                     viewModel.increaseQuantity(product: product)
                 }
             }

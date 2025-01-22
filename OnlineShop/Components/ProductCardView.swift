@@ -1,13 +1,6 @@
 
 import SwiftUI
 
-// MARK: - Nested types
-extension ProductCardView {
-    enum Const {
-        static var image: String { "heart.fill" }
-    }
-}
-
 struct ProductCardView: View {
 
     // MARK: - Properties
@@ -31,7 +24,7 @@ struct ProductCardView: View {
                         Button {
                             viewModel.toggleFavorite(product: product)
                         } label: {
-                            Image(systemName: Const.image)
+                            Image(systemName: Const.Image.heart)
                                 .padding(padding6)
                                 .foregroundColor(product.isFavorite ? .red : .white)
                                 .background(.black)

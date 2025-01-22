@@ -1,13 +1,6 @@
 
 import SwiftUI
 
-// MARK: - Nested types
-extension BackButtonView {
-    enum Const {
-        static var image: String { "chevron.left" }
-    }
-}
-
 struct BackButtonView: View {
 
     // MARK: - Properties
@@ -23,7 +16,7 @@ struct BackButtonView: View {
                     .frame(width: 34)
                     .foregroundColor(.black.opacity(0.3))
                     .opacity(0.3)
-                Image(systemName: Const.image)
+                Image(systemName: Const.Image.chevron)
                     .font(.title3)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)

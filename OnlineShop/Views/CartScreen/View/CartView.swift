@@ -3,29 +3,12 @@ import SwiftUI
 import FirebaseFirestore
 
 // MARK: - Nested types
-extension CartView {
-    enum Const {
-        enum db {
-            static var path: String { "shop" }
-        }
-        enum navigation {
-            static var title: String { "Cart" }
-        }
-        enum title {
-            static var total: String { "Total:" }
-            static var buy: String { "Buy:" }
-        }
-        enum product {
-            static var favorite: String { "isFavorite" }
-        }
-    }
-}
 
 struct CartView: View {
 
     // MARK: - Properties
     @EnvironmentObject var viewModel: ViewModel
-    @FirestoreQuery(collectionPath: Const.db.path) private var items: [Product]
+    @FirestoreQuery(collectionPath: Const.DB.path) private var items: [Product]
     let hPadding: CGFloat = 30
 
     // MARK: - Body
@@ -37,13 +20,13 @@ struct CartView: View {
                 }
             }
 
-            Text("\(Const.title.total) \(viewModel.totalPrice)")
+            Text("\(Const.Title.total) \(viewModel.totalPrice)")
                 .titleFont
                 .padding(.bottom)
-            CustomMainButton(title: Const.title.buy) {}
+            CustomMainButton(title: Const.Button.buy) {}
                 .padding(.horizontal, hPadding)
         }
-        .navigationTitle(Const.navigation.title)
+        .navigationTitle(Const.Title.cart)
         .background(.secondary.opacity(0.3))
     }
 }

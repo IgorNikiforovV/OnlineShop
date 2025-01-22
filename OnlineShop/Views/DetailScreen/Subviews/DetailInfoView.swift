@@ -1,13 +1,6 @@
 
 import SwiftUI
 
-// MARK: - Nested types
-extension DetailInfoView {
-    enum Const {
-        static var buttonTitle: String { "Add to cart" }
-    }
-}
-
 struct DetailInfoView: View {
 
     // MARK: - Properties
@@ -34,7 +27,7 @@ struct DetailInfoView: View {
 
             Spacer()
 
-            CustomMainButton(title: Const.buttonTitle) {
+            CustomMainButton(title: Const.Button.addToCart) {
                 viewModel.addToCatr(product: product)
             }
         }

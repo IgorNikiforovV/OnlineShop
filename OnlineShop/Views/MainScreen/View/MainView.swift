@@ -2,22 +2,10 @@
 import SwiftUI
 import FirebaseFirestore
 
-// MARK: - Nested types
-extension MainView {
-    enum Const {
-        enum db {
-            static var path: String { "shop" }
-        }
-        enum navigation {
-            static var title: String { "Products"  }
-        }
-    }
-}
-
 struct MainView: View {
 
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: Const.db.path) var items: [Product]
+    @FirestoreQuery(collectionPath: Const.DB.path) var items: [Product]
     @EnvironmentObject var viewModel: ViewModel
 
     let columns = Array(repeating: GridItem(), count: 2)
@@ -43,7 +31,7 @@ struct MainView: View {
             .shadow(color: .black.opacity(0.2) , radius: 8, x: 5, y: 8)
 
             // MARK: - Navigation Bar
-            .navigationTitle(Const.navigation.title)
+            .navigationTitle(Const.Title.products)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     NavigationLink(destination: FavoritesView()) {
