@@ -1,9 +1,3 @@
-//
-//  CardImageView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 09.01.2025.
-//
 
 import SwiftUI
 import FirebaseFirestore

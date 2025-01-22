@@ -1,9 +1,3 @@
-//
-//  DetailInfoView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 15.01.2025.
-//
 
 import SwiftUI
 
@@ -12,10 +6,12 @@ struct DetailInfoView: View {
     // MARK: - Properties
     @EnvironmentObject var viewModel: ViewModel
     let product: Product
+    let spacing: CGFloat = 20
+    let hHorizontal: CGFloat = 30
 
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: spacing) {
             HStack {
                 Text(product.name)
                     .titleFont
@@ -31,11 +27,11 @@ struct DetailInfoView: View {
 
             Spacer()
 
-            CustomMainButton(title: "Add to cart") {
+            CustomMainButton(title: Const.Button.addToCart) {
                 viewModel.addToCatr(product: product)
             }
         }
-        .padding(.horizontal, 30)
+        .padding(.horizontal, hHorizontal)
     }
 }
 

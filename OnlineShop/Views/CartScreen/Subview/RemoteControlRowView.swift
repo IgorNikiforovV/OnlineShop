@@ -1,9 +1,3 @@
-//
-//  RemoteControlRowView.swift
-//  OnlineShop
-//
-//  Created by Игорь Никифоров on 16.01.2025.
-//
 
 import SwiftUI
 
@@ -12,41 +6,33 @@ struct RemoteControlRowView: View {
     // MARK: - Properties
     let product: Product
     @EnvironmentObject var viewModel: ViewModel
+    let spacing: CGFloat = 25
 
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .trailing, spacing: 25) {
-            Button {
+        VStack(alignment: .trailing, spacing: spacing) {
+
+            // MARK: Remove button
+            CustomRemoteControlButton(image: Const.Image.remove) {
                 viewModel.removeFromCart(product: product)
-            } label: {
-                Image(systemName: "xmark.circle.fill")
-                    .font(.title2)
             }
-            .buttonStyle(.plain)
 
             HStack {
-                Button {
+                // MARK: Decrease
+                CustomRemoteControlButton(image: Const.Image.decrease) {
                     viewModel.decreaseQuantity(product: product)
-                } label: {
-                    Image(systemName: "minus.rectangle.fill")
-                        .foregroundStyle(.primary)
-                        .font(.title)
                 }
-                .buttonStyle(.plain)
 
+                // MARK: - Quantity
                 if let quantityInCart = product.quantityInCart {
                     Text("\(quantityInCart)")
                         .titleFont
                 }
-
-                Button {
+                
+                // MARK: - Increase
+                CustomRemoteControlButton(image: Const.Image.increase) {
                     viewModel.increaseQuantity(product: product)
-                } label: {
-                    Image(systemName: "plus.rectangle.fill")
-                        .foregroundStyle(.primary)
-                        .font(.title)
                 }
-                .buttonStyle(.plain)
             }
 
         }

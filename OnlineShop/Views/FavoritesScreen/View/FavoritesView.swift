@@ -11,8 +11,9 @@ import FirebaseFirestore
 struct FavoritesView: View {
 
     // MARK: - Properties
-    @FirestoreQuery(collectionPath: "shop", predicates: [.isEqualTo("isFavorite", true)]) var favoriteItems: [Product]
+    @FirestoreQuery(collectionPath: Const.DB.path, predicates: [.isEqualTo(Const.DB.isFavorite, true)]) var favoriteItems: [Product]
     var columns = Array(repeating: GridItem(), count: 2)
+    let hPadding: CGFloat = 10
 
     // MARK: - Body
     var body: some View {
@@ -26,9 +27,9 @@ struct FavoritesView: View {
                 }
             }
         }
-        .padding(.horizontal, 10)
+        .padding(.horizontal, hPadding)
         .background(.secondary.opacity(0.3))
-        .navigationTitle("Favorites")
+        .navigationTitle(Const.Title.favorites)
     }
 }
 
